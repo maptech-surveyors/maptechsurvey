@@ -48,7 +48,8 @@ function fetchIssues () {
                                 '<h6>Issue ID: ' + id + '</h6>'+
                                 '<p><span class="label label-info">' + status + '</span></p>'+
                                 '<h3>' + desc + '</h3>'+
-                                '<p><span class="glyphicon glyphicon-time"></span> ' + severity + ' '+
+                                '<img src="img/img1.png" alt="" width="150" height="120" />'+
+                                '<p><span class="glyphicon glyphicon-time"></span> ' + severity + ' '+                              
                                 '<span class="glyphicon glyphicon-user"></span> ' + assignedTo + '</p>'+
                                 '</div>';
     }
