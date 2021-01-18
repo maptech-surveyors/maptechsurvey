@@ -5,7 +5,7 @@ function saveIssue(e) {
     var issueDesc = document.getElementById('issueDescInput').value;
     var issueSeverity = document.getElementById('issueSeverityInput').value;
     var issueAssignedTo = document.getElementById('issueAssignedToInput').value;
-    var issueStatus = 'Open';  
+    var issueStatus = 'Unconfirmed Payment';  
     var issue = {
       id: issueId,
       description: issueDesc,
@@ -45,12 +45,15 @@ function fetchIssues () {
       var status = issues[i].status;
       
       issuesList.innerHTML +=   '<div class="well">'+
-                                '<h6>Issue ID: ' + id + '</h6>'+
                                 '<p><span class="label label-info">' + status + '</span></p>'+
                                 '<h3>' + desc + '</h3>'+
                                 '<img src="img/img1.png" alt="" width="150" height="120" />'+
+                                '<span <h1>Please Call +254 717 887 117, To confirm your payment.</h1></span>'+
+                                '<h6>Request ID: ' + id + '</h6>'+
                                 '<p><span class="glyphicon glyphicon-time"></span> ' + severity + ' '+                              
                                 '<span class="glyphicon glyphicon-user"></span> ' + assignedTo + '</p>'+
+                                '<a  class="btn " onclick="setStatusClosed(\''+id+'\')"></a> '+
+                                '<a  class="btn " onclick="deleteIssue(\''+id+'\')"></a>'+
                                 '</div>';
     }
   }
@@ -62,7 +65,7 @@ function fetchIssues () {
     
     for(var i = 0; i < issues.length; i++) {
       if (issues[i].id == id) {
-        issues[i].status = "Closed";
+        issues[i].status = "Payment Confirmed";
       }
     }
       
