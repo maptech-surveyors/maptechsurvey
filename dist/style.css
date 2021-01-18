@@ -6,7 +6,7 @@
 
 .center h1{
 	text-align: center;
-	color: red;
+	color: rgb(0, 81, 255);
 }
 
 .main_body {
@@ -25,7 +25,7 @@
 .container{
 	width: 80%;
 	margin: 0 auto;
-	border: 1px solid #fff;
+	border: 1px solid rgba(160, 19, 216, 0.637);
 	padding: 10px;
 }
 
@@ -123,7 +123,7 @@ table tr td{
 }
 
 .show {
-    background-color: blue;
+    background-color: rgb(255, 0, 0);
 }
 
 
